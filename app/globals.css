@@ -3,31 +3,28 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    /* violet */
+    --primary-color: 111, 76, 255;
+  
+    /* white */
+    --text-color: 256, 256, 256;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  body {
+    @apply bg-[#121212] text-[white] text-center p-4;
+    font-family: "DM Sans", sans-serif;
   }
-}
+  .btn {
+    @apply text-lg cursor-pointer rounded transition-all duration-[0.3s] ease-[ease] m-4 px-8 py-3 rounded-[50px] hover:transition-all hover:duration-[0.3s] hover:ease-[ease];
+    font-family: "DM Sans", sans-serif;
+  }
+  .btn-primary {
+    @apply bg-[rgb(var(--primary-color))] border border-[rgb(var(--primary-color))] text-[rgb(var(--text-color))] border-solid;
+  }
+  
+  /* https://thegraph.com/en/ */
+  .btn-semi-transparent {
+    @apply bg-[rgba(var(--primary-color),0.15)] border border-[rgba(var(--primary-color),0.25)] text-[rgba(var(--text-color),0.8)] border-solid hover:bg-[rgba(var(--primary-color),0.35)] hover:border hover:border-[rgba(var(--primary-color),0.5)] hover:text-[rgba(var(--text-color),0.9)] hover:border-solid;
+  }
+  .btn-glow:hover {
+    @apply shadow-[rgba(var(--primary-color),0.5)_0px_0px_20px_0px];
+  }
