@@ -4,10 +4,10 @@
   "homepage": "https://ramav245.github.io/my-portfolio-app",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
   },
   "dependencies": {
     "@emotion/react": "^11.13.0",
