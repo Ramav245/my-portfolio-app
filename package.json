@@ -2,10 +2,11 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "deploy": "yarn run build && yarn run export"
   },
   "dependencies": {
     "@emotion/react": "^11.13.0",
@@ -15,7 +16,7 @@
     "@mui/system": "^5.16.7",
     "@types/nodemailer": "^6.4.15",
     "emailjs-com": "^3.2.0",
-    "next": "14.2.5",
+    "next": "^14.2.5",
     "nodemailer": "^6.9.14",
     "pnpm": "^9.7.1",
     "react": "^17.0.0 || ^18.0.0",

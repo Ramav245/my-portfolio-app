@@ -1,13 +1,9 @@
-/**
-* @type {import('next').NextConfig}
-*/
-const nextConfig = {
-  output: "export",
-  images: {
-    loader: "akamai",
-    path: "",
-  },
-  assetPrefix: "./",
-};
+// next.config.mjs
 
-export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+}
+
+export default nextConfig
